@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppTwo</string>
+    <string name="pregunta">Pregunta</string>
+    <string name="categoria">Categoria</string>
+    <string name="dificultad_de_categoria">Dificultad de categoria</string>
+    <string name="difcultad">difcultad</string>
+</resources>

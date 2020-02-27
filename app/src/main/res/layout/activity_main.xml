@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.everseat.textviewlabel.TextViewLabel
+        android:id="@+id/mitextlabel"
+        android:layout_width="93dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="211dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/pregunta"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:labelColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/text1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="331dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:hint="@string/pregunta"
+        app:layout_constraintBottom_toTopOf="@+id/mitextlabel2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mitextlabel" />
+
+    <com.everseat.textviewlabel.TextViewLabel
+        android:id="@+id/mitextlabel2"
+        android:layout_width="93dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:text="@string/categoria"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:labelColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/text2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="331dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/categoria"
+        app:layout_constraintBottom_toTopOf="@+id/mitextlabel3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mitextlabel2" />
+
+    <com.everseat.textviewlabel.TextViewLabel
+        android:id="@+id/mitextlabel3"
+        android:layout_width="93dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/difcultad"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:labelColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text2" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="240dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="140dp"
+        android:gravity="center"
+        android:hint="@string/difcultad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="161dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imagen12"
+            android:layout_width="147dp"
+            android:layout_height="148dp"
+            android:layout_marginEnd="174dp"
+            android:layout_marginRight="174dp"
+
+            app:layout_constraintEnd_toEndOf="parent" />
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text3"
+        app:layout_constraintStart_toStartOf="@+id/mitextlabel3"
+        app:layout_constraintTop_toBottomOf="@+id/mitextlabel3">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
