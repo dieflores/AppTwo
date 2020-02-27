@@ -11,9 +11,11 @@
     <com.everseat.textviewlabel.TextViewLabel
         android:id="@+id/mitextlabel"
         android:layout_width="93dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="211dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="294dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
         android:text="@string/pregunta"
         android:textColor="@color/colorAccent"
@@ -21,107 +23,119 @@
         app:labelColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/text1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="331dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="19dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="18dp"
         android:hint="@string/pregunta"
         app:layout_constraintBottom_toTopOf="@+id/mitextlabel2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mitextlabel" />
 
     <com.everseat.textviewlabel.TextViewLabel
         android:id="@+id/mitextlabel2"
         android:layout_width="93dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="14dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="294dp"
         android:gravity="center"
         android:text="@string/categoria"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
         app:labelColor="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toTopOf="@+id/text2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="331dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="10dp"
         android:hint="@string/categoria"
         app:layout_constraintBottom_toTopOf="@+id/mitextlabel3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mitextlabel2" />
 
     <com.everseat.textviewlabel.TextViewLabel
         android:id="@+id/mitextlabel3"
         android:layout_width="93dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="@string/difcultad"
         android:textColor="@color/colorPrimary"
         android:textSize="14sp"
         app:labelColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintEnd_toStartOf="@+id/text3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
     <TextView
         android:id="@+id/text3"
         android:layout_width="240dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="140dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="25dp"
         android:gravity="center"
         android:hint="@string/difcultad"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.73"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/mitextlabel3"
+        app:layout_constraintTop_toBottomOf="@+id/text2" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="161dp"
-        android:layout_height="158dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="195dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="108dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imagen12"
-            android:layout_width="147dp"
+            android:layout_width="183dp"
             android:layout_height="148dp"
             android:layout_marginEnd="174dp"
             android:layout_marginRight="174dp"
+            android:src="@drawable/logo"
 
             app:layout_constraintEnd_toEndOf="parent" />
     </FrameLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="66dp"
+        android:layout_width="347dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="123dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/text3"
-        app:layout_constraintStart_toStartOf="@+id/mitextlabel3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mitextlabel3">
 
         <RadioButton
