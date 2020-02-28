@@ -4,4 +4,13 @@
     <string name="categoria">Categoria</string>
     <string name="dificultad_de_categoria">Dificultad de categoria</string>
     <string name="difcultad">difcultad</string>
+
+    //  <!-- TODO: Remove or change this placeholder text -->
+    //
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="radiobutton1">RadioButton</string>
+    <string name="radiobutton2">RadioButton</string>
+    <string name="sigte">sigte</string>
+
+
 </resources>

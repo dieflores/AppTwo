@@ -18,5 +18,6 @@ public class RetroFitClient {
         }
     return retrofit;
     }
+// este es el conversor de json a java via Gson
 
 }

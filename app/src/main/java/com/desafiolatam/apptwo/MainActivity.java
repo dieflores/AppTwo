@@ -15,14 +15,17 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String primeraCosa, segundaCosa;
 
-    private TextViewLabel pregunta, categoria, dificultad;
+    // ahora se va a fragmento  private TextViewLabel pregunta, categoria, dificultad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initializeView();
+
+
+        //   initializeView(); luego a fragment
 
         Api api = RetroFitClient.getRetrofit().create(Api.class);
         Call<RespuestaApi> call = api.getQuestion();
@@ -30,7 +33,12 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<RespuestaApi>() {
             @Override
             public void onResponse(Call<RespuestaApi> call, Response<RespuestaApi> response) {
-                pregunta.setText(response.body().getResults().get(0).getQuestion());
+
+                primeraCosa = response.body().getResults().get(0).getQuestion();
+                segundaCosa = response.body().getResults().get(0).getCategory();
+
+                initializeFragment(primeraCosa, segundaCosa);
+                //  pregunta.setText(response.body().getResults().get(0).getQuestion());
 
             }
 
@@ -44,13 +52,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void initializeView() {
-        pregunta = findViewById(R.id.mitextlabel);
-        categoria = findViewById(R.id.mitextlabel2);
-        dificultad = findViewById(R.id.mitextlabel3);
+   // private void initializeView() {
+      //  pregunta = findViewById(R.id.mitextlabel);
+       // categoria = findViewById(R.id.mitextlabel2);
+       // dificultad = findViewById(R.id.mitextlabel3);
+
+
+//    }
+
+        private void initializeFragment (String cosa1, String cosa2){
+
+            BlankFragment blankFragment = BlankFragment.newInstance(cosa1, cosa2);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.frameLayout, blankFragment, "FIRSTFRAGMENT")
+                    .commit();
+
+
+        }
 
 
     }
-
-
-}
